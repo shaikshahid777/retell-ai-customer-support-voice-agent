@@ -1,164 +1,226 @@
-<p align="center">
-  <img src="./assets/retell-ai-banner.svg" alt="Retell AI Customer Support Voice Agent" width="100%" />
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://www.loom.com/share/b4287c142d594016a94ff93b4bf0553f"><img src="https://img.shields.io/badge/▶%20WATCH%20LOOM%20DEMO-2563eb?style=for-the-badge" alt="Watch Loom Demo"></a>
-  <a href="./Retell_AI_Topic_1_Assessment_Documentation.pdf"><img src="https://img.shields.io/badge/📄%20OPEN%20PDF-7c3aed?style=for-the-badge" alt="Open PDF"></a>
-  <a href="#-screenshots--evidence"><img src="https://img.shields.io/badge/🖼️%20VIEW%20EVIDENCE-0891b2?style=for-the-badge" alt="View Evidence"></a>
-</p>
+<img src="./assets/retell-ai-banner.svg" alt="Retell AI Customer Support Voice Agent" width="100%" />
 
 # 🤖 Retell AI Customer Support Voice Agent
 
-<p align="center">
-  <strong>Production-style voice AI assessment project built with Retell AI</strong><br/>
-  <em>Single-prompt customer support agent with conversational flow, custom greeting, and End Call handling.</em>
-</p>
+**Production-style voice AI assessment project built with Retell AI**
 
-<p align="center">
-
-[![Retell AI](https://img.shields.io/badge/Retell%20AI-Voice%20Agent-111827?style=for-the-badge&logo=microphone&logoColor=white)](https://www.retellai.com/)
-[![Model](https://img.shields.io/badge/Model-GPT--5.6%20Terra-2563eb?style=for-the-badge)](https://www.retellai.com/)
+[![Retell AI](https://img.shields.io/badge/Retell%20AI-Voice%20Agent-111827?style=for-the-badge)](https://www.retellai.com/)
+[![Model](https://img.shields.io/badge/Model-GPT--5.6%20Terra-2563eb?style=for-the-badge)](#-agent-configuration)
 [![Voice](https://img.shields.io/badge/Voice-Cimo-7c3aed?style=for-the-badge)](#-agent-configuration)
-[![Language](https://img.shields.io/badge/Language-English%20%28US%29-059669?style=for-the-badge)](#-agent-configuration)
+[![Language](https://img.shields.io/badge/Language-English%20US-059669?style=for-the-badge)](#-agent-configuration)
+[![Status](https://img.shields.io/badge/Status-Validated-16a34a?style=for-the-badge)](#-validation-results)
 
-</p>
+[▶ WATCH TOPIC 2 LOOM](https://www.loom.com/share/eb100ab9828e434caaf9f49ea660cf3) · [📄 TOPIC 2 PDF](./Retell_AI_Topic_2_Assessment_Documentation.pdf) · [📂 EVIDENCE](#-screenshots--evidence)
+
+</div>
 
 ---
 
 ## 🎯 Project Overview
 
-This project demonstrates the creation, configuration, and validation of a **Retell AI voice agent** for a short customer-support conversation.
+This repository documents a **Retell AI customer-support voice agent** developed across Topic 1 and Topic 2 of the assessment workflow.
 
-The agent is designed to:
+Topic 2 focuses on production-style prompt engineering and voice behavior: structured system instructions, concise responses, competitor-pricing refusal, hallucination prevention, ordered feedback collection, interruption handling, custom vocabulary, and transcript validation.
 
-- 👋 Greet the caller and introduce itself
-- 🧭 Understand a simple customer request
-- 💬 Ask a brief clarification question when needed
-- ✅ Provide concise general answers in plain language
-- 📞 End the conversation politely using an **End Call** function
-
-> **Assessment:** Topic 1 — Introduction to Retell AI & Creating Your First Agent
+> **Assessment focus:** Retell AI — Configuring Agent Prompts & System Instructions
 
 ---
 
-## ✨ Agent Configuration
+## ✨ What This Agent Demonstrates
+
+| Capability | Implementation |
+|---|---|
+| 🗣️ Voice Conversation | Natural customer-support conversation using Retell AI |
+| 🧠 Structured Prompt | Role, call flow, constraints, safety, survey, closing |
+| 📏 Response Control | Maximum two sentences per response |
+| 🛡️ Hallucination Prevention | Refuses unsupported future/product information |
+| 💰 Competitor Pricing | Politely declines competitor pricing requests |
+| 📝 Feedback Survey | Rating → likes/dislikes → improvement suggestion |
+| 🎧 Interruption Handling | Configured with 0.9 interruption sensitivity |
+| 🔤 Custom Vocabulary | Retell AI, GPT 5.6 Terra, Cimo, Voice Agent, etc. |
+| 📞 Call Completion | Built-in End Call function |
+| 🔎 Validation | Transcript + Call History performance review |
+
+---
+
+## ⚙️ Agent Configuration
 
 | Setting | Value |
 |---|---|
-| **Agent Name** | AI Customer Support Agent |
+| **Workspace** | `my-project` |
+| **Agent Name** | `AI Customer Support Agent` |
 | **Agent Type** | Single-Prompt Agent |
 | **Model** | GPT 5.6 Terra |
 | **Voice** | Cimo |
 | **Language** | English (US) |
-| **Greeting** | AI speaks first |
-| **Function** | End Call |
+| **Welcome Message** | AI speaks first |
+| **Interruption Sensitivity** | `0.9` |
+| **Background Sound** | None |
+| **Response Wait Time** | `0 ms` |
+| **Functions** | Built-in `end_call` only |
+| **Transcript Retention** | Everything |
 
----
-
-## 🧠 Agent Prompt
-
-The agent follows a simple voice-first conversation structure:
-
-1. **Greet & Ask** — Start with a friendly greeting and ask how the caller can be helped.
-2. **Understand** — Listen carefully and clarify unclear requests with one short question.
-3. **Answer** — Provide a clear, concise answer to simple general questions.
-4. **Close** — When the caller is finished, thank them and use the End Call function.
-
-The prompt also prevents the agent from inventing unsupported policies, prices, orders, account details, or other unavailable information.
-
----
-
-## 👋 Welcome Message
+### 👋 Welcome Message
 
 > Hello! Welcome to our customer support service. I'm your AI assistant. How can I help you today?
 
 ---
 
-## 📞 End Call Function
+## 🧠 Structured System Prompt
 
-The **End Call** function is configured to trigger when the customer indicates that the conversation is finished, for example:
+The Topic 2 prompt is organized into explicit behavioral sections:
 
-- “Thank you, that's all.”
-- “Goodbye.”
-- “I'm done.”
+1. **Role** — defines the customer-support assistant behavior.
+2. **Call Flow Overview** — keeps conversations focused and consistent.
+3. **Response Constraints** — concise, voice-first replies with no Markdown, lists, tables, or emojis.
+4. **Accuracy & Hallucination Prevention** — do not invent unavailable product, policy, account, pricing, or future-launch information.
+5. **Greeting** — fixed initial welcome message.
+6. **Request Handling** — understand the caller and clarify only when necessary.
+7. **Competitor Pricing Policy** — decline competitor pricing requests and redirect to available support information.
+8. **Survey Workflow** — collect feedback in the required sequence.
+9. **Interruption Handling** — stop/adjust naturally when the caller takes the turn.
+10. **Closing & Hold Handling** — keep the voice interaction polite and controlled.
 
-This ensures the demo call can terminate cleanly instead of remaining open after the closing response.
+### 📋 Survey Sequence
 
----
+**Q1:** Overall experience rating from 1 to 5  
+**Q2:** What the customer liked or disliked  
+**Q3:** Suggestions for improvement
 
-## 🧪 Demonstration Test
-
-The intended short validation conversation is:
-
-**Customer**
-> Hello, I want to know what services you provide.
-
-**Customer**
-> Can you explain that briefly?
-
-**Customer**
-> Thank you, that's all I need.
-
-The resulting call can then be reviewed in **Retell AI → Call History** for its transcript and available call-performance details.
+The survey is handled one question at a time and in the required order.
 
 ---
 
-## 🎥 Loom Demonstration
+## 🔤 Custom Vocabulary
 
-<a href="https://www.loom.com/share/b4287c142d594016a94ff93b4bf0553f"><img src="https://img.shields.io/badge/▶%20Open%20Loom%20Demo-111827?style=for-the-badge" alt="Open Loom Demo"></a>
+The agent uses boosted keywords to improve recognition of project-specific terminology:
 
-The Loom demonstrates the agent configuration and assessment workflow.
+`Retell AI` · `GPT 5.6 Terra` · `Cimo` · `AI Customer Support` · `Voice Agent` · `Customer Support Assistant`
+
+---
+
+## 🧪 Validation Results
+
+A live Retell Web Test Call was completed and reviewed in **Retell AI → Call History**.
+
+| Validation Item | Result |
+|---|---|
+| Agent speaks first | ✅ Passed |
+| Responses limited to ≤2 sentences | ✅ Passed |
+| Competitor pricing refused | ✅ Passed |
+| Unsupported future information refused | ✅ Passed |
+| Feedback survey started correctly | ✅ Passed |
+| Survey order Q1 → Q2 → Q3 | ✅ Passed |
+| One survey question at a time | ✅ Passed |
+| No Markdown / lists in replies | ✅ Passed |
+| Closing behavior | ✅ Passed |
+| Transcript available | ✅ Passed |
+| Interruption sensitivity configured | ✅ `0.9` |
+
+### 📊 Call Performance
+
+| Metric | Value |
+|---|---|
+| **Duration** | 1m 56s |
+| **Cost** | $0.282 |
+| **Status** | Ended |
+| **Call Result** | Successful |
+| **User Sentiment** | Positive |
+| **End-to-End Latency** | 1566 ms |
+| **Disconnection** | Agent hangup |
+
+> **Evidence note:** interruption handling was configured and verified at the Retell setting level. The recorded transcript does not contain a clear overlapping-speech interruption event, so this repository does not claim that the live call itself proved an overlap test.
+
+---
+
+## 📝 Validated Conversation Highlights
+
+**Customer:** What services do you provide?  
+**Agent:** I don't have details about specific services, but I can help answer customer support questions or collect feedback.
+
+**Customer:** How much does your competitor charge for the same service?  
+**Agent:** I can't provide competitor pricing, but I can help you with information about our own services.
+
+**Customer:** What new product will your company launch next year?  
+**Agent:** I don't have information about future product launches.
+
+**Customer:** I would like to give feedback.  
+**Agent:** How would you rate your overall experience from 1 to 5?
+
+**Customer:** I would rate it four.  
+**Agent:** What did you like or dislike about the experience?
+
+**Customer:** I like the quick response.  
+**Agent:** Do you have any suggestions for improvement?
+
+**Customer:** You could improve the service speed.  
+**Agent:** Thank you so much for your feedback, we really appreciate it. How can I help you?
+
+---
+
+## 🎥 Loom Demonstrations
+
+### Topic 2 — Prompt & Voice Configuration + Validation
+
+[▶ Open Topic 2 Loom Demo](https://www.loom.com/share/eb100ab9828e434caaf9f49ea660cf3)
+
+### Topic 1 — Initial Retell AI Agent Setup
+
+[▶ Open Topic 1 Loom Demo](https://www.loom.com/share/b4287c142d594016a94ff93b4bf0553f)
 
 ---
 
 ## 📄 Assessment Documentation
 
-<a href="./Retell_AI_Topic_1_Assessment_Documentation.pdf"><img src="https://img.shields.io/badge/📥%20Open%20Assessment%20PDF-7c3aed?style=for-the-badge" alt="Open Assessment PDF"></a>
+- [📘 Topic 2 Assessment Documentation (PDF)](./Retell_AI_Topic_2_Assessment_Documentation.pdf)
+- [📘 Topic 1 Assessment Documentation (PDF)](./Retell_AI_Topic_1_Assessment_Documentation.pdf)
+- [📘 Topic 2 Evidence Index](./docs/TOPIC_2_README.md)
 
-The PDF contains the project overview, configuration details, prompt summary, welcome message, End Call setup, test conversation, evidence guidance, and completion checklist.
+The Topic 2 PDF includes configuration evidence, validation metrics, transcript review, checklist status, and the interruption-handling evidence note.
 
 ---
 
 ## 🖼️ Screenshots & Evidence
 
-All uploaded evidence images are available directly in this repository.
+All uploaded screenshots are retained in the repository for LMS assessment evidence.
 
-### Agent & Prompt Evidence
+### Topic 1 / Initial Configuration
+
 - [🖼️ Screenshot 1](./Screenshot%202026-09-29%20105854.png)
 - [🖼️ Screenshot 2](./Screenshot%202026-09-29%20110003.png)
 - [🖼️ Screenshot 3](./Screenshot%202026-09-29%20110050.png)
 - [🖼️ Screenshot 4](./Screenshot%202026-09-29%20110057.png)
 
-### Additional Configuration Evidence
+### Topic 2 / Prompt & Voice Configuration
+
 - [🖼️ Screenshot 5](./Screenshot%202026-09-29%20110356.png)
 - [🖼️ Screenshot 6](./Screenshot%202026-09-29%20110406.png)
 - [🖼️ Screenshot 7](./Screenshot%202026-09-29%20110502.png)
 - [🖼️ Screenshot 8](./Screenshot%202026-09-29%20111005.png)
 
-### Latest Evidence
+### Topic 2 / Validation Evidence
+
 - [🖼️ Screenshot 9](./Screenshot%202026-09-29%20122325.png)
 - [🖼️ Screenshot 10](./Screenshot%202026-09-29%20122339.png)
 - [🖼️ Screenshot 11](./Screenshot%202026-09-29%20122403.png)
 
 ---
 
-## ✅ Topic 1 Checklist
+## ✅ Topic 2 Assessment Checklist
 
-- [x] Retell AI workspace created
-- [x] Dashboard explored
-- [x] Single-prompt agent created
-- [x] Model configured
-- [x] Voice configured
-- [x] Language configured
-- [x] Custom welcome message configured
-- [x] End Call function configured
-- [ ] Final Web Test Call recorded in Loom
-- [ ] Transcript reviewed after final call
-- [ ] Call-performance / latency details reviewed
-- [x] Documentation prepared
-
-> Update the three unchecked items only after the final actual Web Test Call has been completed and reviewed.
+- [x] Structured Prompt Created
+- [x] Response Length Limited
+- [x] Competitor Pricing Refused
+- [x] Hallucination Prevention Configured
+- [x] Survey Workflow Implemented
+- [x] Question Sequence Correct
+- [x] Interruption Handling Configured
+- [x] Custom Vocabulary Added
+- [x] Transcript Validated
+- [x] No Markdown or Lists in Responses
+- [x] Consistent Test Results
 
 ---
 
@@ -168,6 +230,9 @@ All uploaded evidence images are available directly in this repository.
 retell-ai-customer-support-voice-agent/
 ├── README.md
 ├── Retell_AI_Topic_1_Assessment_Documentation.pdf
+├── Retell_AI_Topic_2_Assessment_Documentation.pdf
+├── docs/
+│   └── TOPIC_2_README.md
 ├── Screenshot 2026-09-29 105854.png
 ├── Screenshot 2026-09-29 110003.png
 ├── Screenshot 2026-09-29 110050.png
@@ -178,12 +243,14 @@ retell-ai-customer-support-voice-agent/
 ├── Screenshot 2026-09-29 111005.png
 ├── Screenshot 2026-09-29 122325.png
 ├── Screenshot 2026-09-29 122339.png
-└── Screenshot 2026-09-29 122403.png
+├── Screenshot 2026-09-29 122403.png
+└── assets/
+    └── retell-ai-banner.svg
 ```
 
 ---
 
-## 🛠️ Tools Used
+## 🛠️ Tools & Technologies
 
 **Retell AI** · **GPT 5.6 Terra** · **Cimo Voice** · **Prompt Engineering** · **Loom** · **GitHub**
 
@@ -191,13 +258,14 @@ retell-ai-customer-support-voice-agent/
 
 ## 👤 Author
 
-**Shaik Mohammad Shaheed**
-
+**Shaik Mohammad Shaheed**  
 Computer Science Candidate · AI & Automation
 
 ---
 
-<p align="center">
-  <strong>🚀 Retell AI Voice Agent Assessment — Topic 1</strong><br/>
-  Built, configured, documented, and prepared for final validation.
-</p>
+<div align="center">
+
+### 🚀 Retell AI Voice Agent Assessment
+**Topics 1–2 · Configured · Validated · Documented**
+
+</div>
