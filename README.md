@@ -1,3 +1,13 @@
+<p align="center">
+  <img src="./assets/retell-ai-banner.svg" alt="Retell AI Customer Support Voice Agent" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://www.loom.com/share/b4287c142d594016a94ff93b4bf0553f"><img src="https://img.shields.io/badge/▶%20WATCH%20LOOM%20DEMO-2563eb?style=for-the-badge" alt="Watch Loom Demo"></a>
+  <a href="./Retell_AI_Topic_1_Assessment_Documentation.pdf"><img src="https://img.shields.io/badge/📄%20OPEN%20PDF-7c3aed?style=for-the-badge" alt="Open PDF"></a>
+  <a href="#-screenshots--evidence"><img src="https://img.shields.io/badge/🖼️%20VIEW%20EVIDENCE-0891b2?style=for-the-badge" alt="View Evidence"></a>
+</p>
+
 # 🤖 Retell AI Customer Support Voice Agent
 
 <p align="center">
@@ -96,7 +106,7 @@ The resulting call can then be reviewed in **Retell AI → Call History** for it
 
 ## 🎥 Loom Demonstration
 
-**[▶️ Watch the Loom Demo](https://www.loom.com/share/b4287c142d594016a94ff93b4bf0553f)**
+<a href="https://www.loom.com/share/b4287c142d594016a94ff93b4bf0553f"><img src="https://img.shields.io/badge/▶%20Open%20Loom%20Demo-111827?style=for-the-badge" alt="Open Loom Demo"></a>
 
 The Loom demonstrates the agent configuration and assessment workflow.
 
@@ -104,7 +114,7 @@ The Loom demonstrates the agent configuration and assessment workflow.
 
 ## 📄 Assessment Documentation
 
-**[📥 Open / Download the Assessment PDF](./Retell_AI_Topic_1_Assessment_Documentation.pdf)**
+<a href="./Retell_AI_Topic_1_Assessment_Documentation.pdf"><img src="https://img.shields.io/badge/📥%20Open%20Assessment%20PDF-7c3aed?style=for-the-badge" alt="Open Assessment PDF"></a>
 
 The PDF contains the project overview, configuration details, prompt summary, welcome message, End Call setup, test conversation, evidence guidance, and completion checklist.
 
